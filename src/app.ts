@@ -11,15 +11,19 @@ app.get("/", (req: Request, res: Response) => {
   res.json({ message: "API running 🚀" });
 });
 
-// ✅ test DB route
-app.get("/test-db", async (req: Request, res: Response) => {
-  try {
-    const result = await pool.query("SELECT NOW()");
-    res.json(result.rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send("DB error");
-  }
-});
+// test DB route
+app.get("/test-db", async (req, res) => {
+    res.send("test route works");
+  });
+
+// app.get("/test-db", async (req: Request, res: Response) => {
+//   try {
+//     const result = await pool.query("SELECT NOW()");
+//     res.json(result.rows);
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).send("DB error");
+//   }
+// });
 
 export default app;
