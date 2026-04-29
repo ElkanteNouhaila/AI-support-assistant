@@ -22,10 +22,6 @@
     "multer": "^2.1.1",
     "pg": "^8.20.0"
   },
-  "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./dist"
-  },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
     "@types/cors": "^2.8.19",

@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
 
 const app = express();
@@ -6,8 +6,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.json({ message: "API running 🚀" });
+app.get("/", (req: Request, res: Response) => {
+  res.json({ message: "API running " });
 });
 
 export default app;
